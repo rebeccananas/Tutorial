@@ -1,0 +1,32 @@
+html {
+    background-color: #f1f5f9;
+    font-family: sans-serif;
+  }
+  
+  body {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 80ch;
+    padding: 1rem;
+    line-height: 1.5;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+ h1 {
+    color: rgb(177, 144, 180);
+    font-size: 3rem;
+    font-family: sans-serif;
+      }
+ h2 {
+    color: rgb(94, 0, 94);
+    font: size 2rem;
+    font-style: oblique;
+      }
+ h3 {
+    color: rgb(212, 134, 202);
+    font: 1em Calibri;
+    font-weight: bold;
+  }
