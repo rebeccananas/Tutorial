@@ -1,7 +1,7 @@
 ---
 import { bigint } from "astro/zod";
 import { Code } from "astro:components";
-
+const pageTitle = "Bloggy blog";
 
 ---
 
@@ -11,11 +11,11 @@ import { Code } from "astro:components";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
         <a href="/">Home</a>
-		<h1>Bloggy blog</h1>
+		<h1>{pageTitle}</h1>
         <h2>A beautiful blog site for my very secret diary for everyone to read, because i'm quirky like that:))</h2>
 
         <p>Enjoy my extremely nice blog. And please don't read it because it's secret. Or maybe just because my english is bad and I should practice more and yeah.</p>

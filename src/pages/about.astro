@@ -1,5 +1,17 @@
 ---
+const pageTitle = "About Me";
 
+const identity = {
+  firstName: "Rubarb",
+  country: "Canary islands",
+  occupation: "Hackedyhacker",
+  hobbies: ["photography", "birdwatching", "baseball"],
+};
+
+const skills = ["Drinking coffee with a drop of plant fertilizer (for the minerals ofc)", "Rollerskating on grass (because why do it easy if you can make it harder)", "Painting on candels with cyanide (it makes a really fun birthday present)"];
+const sad = true;
+const finished = false;
+const goal = 1089;
 ---
 
 <html lang="en">
@@ -8,11 +20,17 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
+		<style>
+			h1 {
+			  color: rgb(177, 144, 180);
+			  font-size: 3rem;
+			}
+		  </style>
 	</head>
 	<body>
         <a href="/">Home</a>
-		<h1>My Astro Site</h1>
+		<h1>{pageTitle}</h1>
         <h2>... and my new Astro site!</h2>
 
         <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
@@ -23,3 +41,22 @@
         <p>PS. I just copied this text from the astro tutorial and I know it's kinda boring. On the other pages i'll try to be a bit more interesting, because why not ... i guess.</p>
 	</body>
 </html>
+
+<p>Here are a few facts about me:</p>
+<ul>
+  <li>My name is {identity.firstName}.</li>
+  <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
+  {identity.hobbies.length >= 2 &&
+    <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
+  }
+</ul>
+<p>My skills are:</p>
+<ul>
+  {skills.map((skill) => <li>{skill}</li>)}
+</ul>
+
+{sad && <p>I am sad to be learning Astro!</p>}
+
+{finished && <p>I finished this tutorial!</p>}
+
+{goal === 1089 ? <p>My goal is to finish in 1089 days.</p> : <p>My goal is not 1089 days.</p>}
